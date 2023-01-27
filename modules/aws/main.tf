@@ -1,7 +1,7 @@
 #tfsec:ignore:aws-s3-enable-bucket-logging
 resource "aws_s3_bucket" "this" {
   bucket = "terraform-is-love"
-  acl    = "private"
+  acl    = "public"
 
   server_side_encryption_configuration {
     rule {
@@ -16,9 +16,9 @@ resource "aws_s3_bucket" "this" {
     enabled = true
   }
 
-  tags = {
-    Owner = "WeScale"
-  }
+  # tags = {
+  #   Owner = "WeScale"
+  # }
 }
 
 resource "aws_s3_bucket_public_access_block" "this" {
