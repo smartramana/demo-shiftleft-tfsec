@@ -32,5 +32,5 @@ resource "aws_s3_bucket_public_access_block" "this" {
 resource "aws_kms_key" "this" {
   description             = "KMS key demo"
   deletion_window_in_days = 10
-  enable_key_rotation     = true
+  enable_key_rotation     = false
 }
